@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "places": {
+      "via": "categories",
+      "collection": "place",
+      "dominant": true
+    },
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

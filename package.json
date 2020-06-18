@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "workspaces": [
+    "tuscany-content",
+    "tuscany-front-end",
+    "tuscany-components"
+  ]
+}

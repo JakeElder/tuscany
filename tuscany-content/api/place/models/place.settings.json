@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "name": "place"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name_roman": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": false
+    },
+    "categories": {
+      "collection": "category",
+      "via": "places"
+    },
+    "name_thai": {
+      "type": "string"
+    },
+    "name_romanised": {
+      "type": "string"
+    },
+    "name_origin_script": {
+      "type": "enumeration",
+      "enum": [
+        "Roman",
+        "Thai"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "coordinates": {
+      "type": "string"
+    }
+  }
+}

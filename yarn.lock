@@ -13910,6 +13910,11 @@ subscriptions-transport-ws@^0.9.11:
     symbol-observable "^1.0.4"
     ws "^5.2.0"
 
+superstruct@^0.10.11:
+  version "0.10.11"
+  resolved "https://registry.yarnpkg.com/superstruct/-/superstruct-0.10.11.tgz#463d406844eb29601f0810088b93a41b6ed91c8c"
+  integrity sha512-8VXKow55wNwUswoeBiqWYSoQvhwf3rOmd78hoZFW1xlk8Hv+gs4QaiXGbQUYQG0BJJMfQrbgU8C7rv60gB96cg==
+
 supports-color@6.1.0, supports-color@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-6.1.0.tgz#0764abc69c63d5ac842dd4867e8d025e880df8f3"

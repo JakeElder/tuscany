@@ -1,6 +1,10 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/types/*": ["../tuscany-types/types/*"]
+    },
     "rootDirs": ["src", "stories"]
   },
   "exclude": ["node_modules"],

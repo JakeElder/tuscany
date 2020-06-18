@@ -1,14 +1,12 @@
 {
-  "name": "@mindfulstudio/tuscany-components",
+  "name": "@mindfulstudio/tuscany-types",
   "private": true,
   "version": "0.1.0",
-  "description": "Components for Tuscany",
-  "scripts": {
-    "develop": "start-storybook -p 5020 --ci",
-    "build-storybook": "build-storybook"
-  },
+  "description": "Types for Tuscany",
   "author": "Jake Elder",
-  "dependencies": {},
+  "dependencies": {
+    "superstruct": "^0.10.11"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@storybook/addon-actions": "^5.3.19",

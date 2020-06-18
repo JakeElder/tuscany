@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["../tuscany-components/src/*"]
+      "@/ui/*": ["../tuscany-components/src/*"]
     }
   },
   "exclude": ["node_modules"],

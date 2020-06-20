@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 5000",
+    "develop": "next dev -p 5000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test:e2e": "start-server-and-test develop http://localhost:5000 \"cypress open\""
   },
   "dependencies": {
+    "@apollo/client": "^3.0.0-rc.6",
     "@mindfulstudio/tuscany-components": "*",
+    "graphql": "^15.1.0",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.3.5",
     "next-transpile-modules": "^3.3.0",
     "react": "16.13.1",
@@ -17,6 +21,8 @@
   "devDependencies": {
     "@types/node": "^14.0.13",
     "@types/react": "^16.9.36",
+    "cypress": "^4.8.0",
+    "start-server-and-test": "^1.11.0",
     "typescript": "^3.9.5"
   }
 }

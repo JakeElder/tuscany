@@ -19,7 +19,7 @@ This is a next.js repo, containing the front end and API code.
 To run the development server (default port: 5000)
 
 ```shell
-yarn dev
+yarn develop
 ```
 
 ### Tuscany Content

@@ -1,0 +1,11 @@
+{
+  "src/*.tsx": {
+    "alternate": "cypress/integration/{}.spec.ts",
+    "type": "source"
+  },
+  "cypress/integration/*.spec.ts": {
+    "alternate": ["src/{}.tsx", "src/{}.ts"],
+    "type": "test"
+  },
+  "src/pages/*.tsx": { "type": "page" }
+}

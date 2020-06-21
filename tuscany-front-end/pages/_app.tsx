@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
-import fetch from "isomorphic-unfetch";
+import fetch from "cross-fetch";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),

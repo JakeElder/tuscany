@@ -7,5 +7,5 @@ export default {
 };
 
 export const Default = () => (
-  <CategoryListItem name="Food d Drink" color="blue" />
+  <CategoryListItem name="Food and Drink" color="blue" />
 );

@@ -5,7 +5,8 @@
   "description": "Components for Tuscany",
   "scripts": {
     "develop": "start-storybook -p 5020 --ci",
-    "build-storybook": "build-storybook"
+    "build": "build-storybook --output-dir build",
+    "deploy": "vercel deploy ./build --no-clipboard --token=$VERCEL_TOKEN --prod"
   },
   "author": "Jake Elder",
   "dependencies": {},

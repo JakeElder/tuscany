@@ -7,3 +7,4 @@ export default {
 };
 
 export const Default = () => <Button>Hello Button</Button>;
+export const Japanese = () => <Button>は</Button>;

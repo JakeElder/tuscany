@@ -6,7 +6,7 @@ import fetch from "cross-fetch";
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: "http://localhost:5010/graphql",
+    uri: process.env.GRAPHQL_URL,
     fetch,
   }),
 });

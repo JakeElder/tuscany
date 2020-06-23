@@ -34,6 +34,9 @@ jobs:
         with:
           node-version: '14'
       - name: Add Vercel Config
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_COMPONENTS_PROJECT_ID: ${{ secrets.VERCEL_COMPONENTS_PROJECT_ID }}
         run: |
           mkdir -p ./tuscany-components/build/.vercel
           printf '{ "orgId": "%s", "projectId", "%s" }' \

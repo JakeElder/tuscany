@@ -7,18 +7,35 @@ jobs:
     name: Build Components
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Setup node
+      - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: '14'
-      - name: Yarn install
-        run: |
-          yarn --cwd ./tuscany-components install --focus
-          yarn --cwd ./tuscany-components build
-      - name: Upload build
+      - name: Install NPM Deps
+        run: yarn install
+      - name: Build 
+        run: yarn --cwd ./tuscany-components build
+      - name: Upload Build
         uses: actions/upload-artifact@v1
         with:
           name: build
           path: ./tuscany-components/build
+
+  deploy_components:
+    name: Deploy Components
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Add Vercel Config
+        run: |
+          mkdir -p ./tuscany-components/build/.vercel
+          printf '{ "orgId": "%s", "projectId", "%s" }' \
+            $VERCEL_ORG_ID \
+            $VERCEL_COMPONENTS_PROJECT_ID

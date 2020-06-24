@@ -5,5 +5,9 @@
     "tuscany-front-end",
     "tuscany-components",
     "tuscany-types"
-  ]
+  ],
+  "name": "workspace",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }

@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "develop": "next dev -p 5000",
+    "develop": "next dev -p 5020",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "start-server-and-test develop http://localhost:5000 \"cypress open\""
+    "test": "start-server-and-test develop http://localhost:5000 \"cypress open\""
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-rc.6",

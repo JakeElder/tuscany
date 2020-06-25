@@ -1,7 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-components",
-  "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Components for Tuscany",
   "scripts": {
     "develop": "start-storybook -p 5010 --ci",
@@ -9,7 +8,12 @@
     "deploy": "npx vercel deploy ./build --no-clipboard --token=$VERCEL_TOKEN --prod"
   },
   "author": "Jake Elder",
-  "dependencies": {},
+  "dependencies": {
+    "@mindfulstudio/tuscany-types": "0.0.0"
+  },
+  "exports": {
+    "./": "./src"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@storybook/addon-actions": "^5.3.19",

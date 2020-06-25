@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@/ui/Button";
+import Button from "@mindfulstudio/tuscany-components/Button";
 import { useQuery, gql } from "@apollo/client";
 
 const CATEGORIES = gql`

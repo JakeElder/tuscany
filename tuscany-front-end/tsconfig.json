@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/ui/*": ["../tuscany-components/src/*"]
-    }
+      "@mindfulstudio/tuscany-components/*": ["../tuscany-components/src/*"]
+    },
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]

@@ -14,7 +14,7 @@ This is the workspace for the chiangdao.guide project, codenamed Tuscany.
 | **develop**   |   ﹘  |    ⌧    |      ⌧     |     ⌧     |
 | **test**      |   ﹘  |    ﹘   |      □     |     ⌧     |
 | **format**    |   ⌧   |    ⌧    |      ⌧     |     ⌧     |
-| **typecheck** |   □   |    ﹘   |      □     |     □     |
+| **typecheck** |   ⌧   |    ﹘   |      ⌧     |     ⌧     |
 | **build**     |   ﹘  |    ﹘   |     ﹘     |     ⌧     |
 | **start**     |   ﹘  |    ﹘   |     ﹘     |     ⌧     |
 | **publish**   |   □   |    ﹘   |      □     |     ﹘    |

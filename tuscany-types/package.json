@@ -4,7 +4,8 @@
   "description": "Types for Tuscany",
   "author": "Jake Elder",
   "scripts": {
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "superstruct": "^0.10.12"

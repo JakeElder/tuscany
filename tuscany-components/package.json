@@ -6,7 +6,8 @@
     "develop": "start-storybook -p 5010 --ci",
     "build": "build-storybook --output-dir build",
     "deploy": "npx vercel deploy ./build --no-clipboard --token=$VERCEL_TOKEN --prod",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "typecheck": "tsc --noEmit"
   },
   "author": "Jake Elder",
   "dependencies": {

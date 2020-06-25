@@ -27,10 +27,7 @@
     },
     "name_origin_script": {
       "type": "enumeration",
-      "enum": [
-        "Roman",
-        "Thai"
-      ]
+      "enum": ["Roman", "Thai"]
     },
     "description": {
       "type": "text",

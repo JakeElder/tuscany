@@ -13,7 +13,7 @@ This is the workspace for the chiangdao.guide project, codenamed Tuscany.
 | **port**      |   ﹘  |   5000  |    5010    |    5020   |
 | **develop**   |   ﹘  |    ⌧    |      ⌧     |     ⌧     |
 | **test**      |   ﹘  |    ﹘   |      □     |     ⌧     |
-| **format**    |   □   |    □    |      □     |     □     |
+| **format**    |   ⌧   |    ⌧    |      ⌧     |     ⌧     |
 | **typecheck** |   □   |    ﹘   |      □     |     □     |
 | **build**     |   ﹘  |    ﹘   |     ﹘     |     ⌧     |
 | **start**     |   ﹘  |    ﹘   |     ﹘     |     ⌧     |

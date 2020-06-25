@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "knex": "<0.20.0",
@@ -34,5 +35,8 @@
   "engines": {
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }

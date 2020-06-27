@@ -7,3 +7,4 @@ export default {
 };
 
 export const Default = () => <Header>This is a Header</Header>;
+export const Japanese = () => <Header>や</Header>;

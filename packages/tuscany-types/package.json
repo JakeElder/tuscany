@@ -7,11 +7,14 @@
     "format": "prettier . --write",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "superstruct": "^0.10.12"
+  "publishConfig": {
+    "access": "public"
   },
   "exports": {
     "./": "./types"
+  },
+  "dependencies": {
+    "superstruct": "^0.10.12"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

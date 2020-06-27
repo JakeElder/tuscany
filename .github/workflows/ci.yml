@@ -6,8 +6,37 @@ on:
       - develop
 
 jobs:
+  publish_packages:
+    if: "contains(github.event.head_commit.message, '[stage]')"
+    name: Version Packages
+    needs: build_components
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Version 
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set \
+            '//registry.npmjs.org/:_authToken' \
+            "${NPM_TOKEN}"
+          npx lerna version \
+            --conventional-commits \
+            --conventional-prerelease \
+            --preid rc \
+            --exact \
+            --yes
+          npx lerna publish \
+            --from-git \
+            --yes
+
   build_components:
-    if: "contains(github.event.head_commit.message, '[ci]')"
+    if: "contains(github.event.head_commit.message, '[stage]')"
     name: Build Components
     runs-on: ubuntu-latest
     steps:
@@ -38,9 +67,9 @@ jobs:
           path: ./tuscany-components/build
 
   deploy_components:
-    if: "contains(github.event.head_commit.message, '[ci]')"
+    if: "contains(github.event.head_commit.message, '[stage]')"
     name: Deploy Components
-    needs: build_components
+    needs: publish_packages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -62,8 +91,9 @@ jobs:
         run: yarn --cwd ./tuscany-components deploy
 
   deploy_content:
-    if: "contains(github.event.head_commit.message, '[ci]')"
+    if: "contains(github.event.head_commit.message, '[stage]')"
     name: Deploy Content
+    needs: publish_packages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

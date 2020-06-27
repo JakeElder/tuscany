@@ -3,9 +3,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "version": "lerna version --conventional-commits --conventional-prerelease --preid rc --exact --no-push"
-  },
   "name": "workspace",
   "devDependencies": {
     "lerna": "^3.22.1"

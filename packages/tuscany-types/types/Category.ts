@@ -6,4 +6,6 @@ const Struct = object({
   places: optional(array(string())),
 });
 
+// Feature
+
 export type Category = StructType<typeof Struct>;

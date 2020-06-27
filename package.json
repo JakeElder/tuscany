@@ -1,10 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "tuscany-content",
-    "tuscany-front-end",
-    "tuscany-components",
-    "tuscany-types"
+    "packages/*"
   ],
   "name": "workspace",
   "devDependencies": {

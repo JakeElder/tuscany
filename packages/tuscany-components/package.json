@@ -10,6 +10,9 @@
     "typecheck": "tsc --noEmit"
   },
   "author": "Jake Elder",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@mindfulstudio/tuscany-types": "0.0.0"
   },

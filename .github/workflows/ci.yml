@@ -6,9 +6,43 @@ on:
       - develop
 
 jobs:
+  build_components:
+    if: "contains(github.event.head_commit.message, '[stage]')"
+    name: Build Components
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install NPM Deps
+        run: yarn install
+      - name: Build 
+        run: |
+          npx lerna run build \
+            --scope @mindfulstudio/tuscany-components \
+            --stream
+      - name: Upload Build
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: ./packages/tuscany-components/build
+
   publish_packages:
     if: "contains(github.event.head_commit.message, '[stage]')"
-    name: Version Packages
+    name: Publish Packages
     needs: build_components
     runs-on: ubuntu-latest
     steps:
@@ -35,37 +69,6 @@ jobs:
             --from-git \
             --yes
 
-  build_components:
-    if: "contains(github.event.head_commit.message, '[stage]')"
-    name: Build Components
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14'
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v1
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install NPM Deps
-        run: yarn install
-      - name: Build 
-        run: yarn --cwd ./tuscany-components build
-      - name: Upload Build
-        uses: actions/upload-artifact@v1
-        with:
-          name: build
-          path: ./tuscany-components/build
-
   deploy_components:
     if: "contains(github.event.head_commit.message, '[stage]')"
     name: Deploy Components
@@ -82,13 +85,16 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: build
-          path: ./tuscany-components/build
+          path: ./packages/tuscany-components/build
       - name: Deploy Build
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_COMPONENTS_PROJECT_ID }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: yarn --cwd ./tuscany-components deploy
+        run: |
+          npx lerna run deploy \
+            --scope @mindfulstudio/tuscany-components \
+            --stream
 
   deploy_content:
     if: "contains(github.event.head_commit.message, '[stage]')"

@@ -7,7 +7,8 @@ on:
 
 jobs:
   build_components:
-    if: "contains(github.event.head_commit.message, '[stage]')"
+    # if: "contains(github.event.head_commit.message, '[stage]')"
+    if: false
     name: Build Components
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +17,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: "14"
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -29,7 +30,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install NPM Deps
         run: yarn install
-      - name: Build 
+      - name: Build
         run: |
           npx lerna run build \
             --scope @mindfulstudio/tuscany-components \
@@ -43,16 +44,25 @@ jobs:
   publish_packages:
     if: "contains(github.event.head_commit.message, '[stage]')"
     name: Publish Packages
-    needs: build_components
+    # needs: build_components
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
-      - name: Version 
+          node-version: "14"
+      - name: Configure Git Identity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name 'Jake Elder'
+          git config user.email 'jake@jakes.world'
+          git config user.password ${GITHUB_TOKEN}
+      - name: Version
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
@@ -65,12 +75,12 @@ jobs:
             --preid rc \
             --exact \
             --yes
-          npx lerna publish \
-            --from-git \
+          npx lerna publish from-package \
             --yes
 
   deploy_components:
-    if: "contains(github.event.head_commit.message, '[stage]')"
+    # if: "contains(github.event.head_commit.message, '[stage]')"
+    if: false
     name: Deploy Components
     needs: publish_packages
     runs-on: ubuntu-latest
@@ -80,7 +90,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '14'
+          node-version: "14"
       - name: Restore Build Dir
         uses: actions/download-artifact@v1
         with:
@@ -97,7 +107,8 @@ jobs:
             --stream
 
   deploy_content:
-    if: "contains(github.event.head_commit.message, '[stage]')"
+    # if: "contains(github.event.head_commit.message, '[stage]')"
+    if: false
     name: Deploy Content
     needs: publish_packages
     runs-on: ubuntu-latest
@@ -106,6 +117,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.0.5
         with:
           heroku_api_key: ${{ secrets.HEROKU_TOKEN }}
-          heroku_app_name: 'tuscany-content'
-          heroku_email: 'jake@mindfulstudio.io'
-          appdir: 'tuscany-content'
+          heroku_app_name: "tuscany-content"
+          heroku_email: "jake@mindfulstudio.io"
+          appdir: "tuscany-content"

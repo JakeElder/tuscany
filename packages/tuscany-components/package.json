@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-components",
-  "version": "0.0.0",
+  "version": "0.1.0-rc.0",
   "description": "Components for Tuscany",
   "scripts": {
     "develop": "start-storybook -p 5010 --ci",
@@ -14,7 +14,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@mindfulstudio/tuscany-types": "0.0.0"
+    "@mindfulstudio/tuscany-types": "0.1.0-rc.0"
   },
   "exports": {
     "./": "./src"

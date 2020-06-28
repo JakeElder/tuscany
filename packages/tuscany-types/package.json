@@ -8,10 +8,8 @@
     "typecheck": "tsc --noEmit"
   },
   "publishConfig": {
-    "access": "public"
-  },
-  "exports": {
-    "./": "./types"
+    "access": "public",
+    "directory": "types"
   },
   "dependencies": {
     "@mindfulstudio/tuscany-tsconfig": "0.2.1-ic.2",

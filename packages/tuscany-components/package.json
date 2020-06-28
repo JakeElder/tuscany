@@ -11,14 +11,12 @@
   },
   "author": "Jake Elder",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "src"
   },
   "dependencies": {
     "@mindfulstudio/tuscany-tsconfig": "0.2.1-ic.2",
     "@mindfulstudio/tuscany-types": "0.2.1-ic.2"
-  },
-  "exports": {
-    "./": "./src"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

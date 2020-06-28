@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1-ic.1](https://github.com/JakeElder/tuscany/compare/v0.2.1-ic.0...v0.2.1-ic.1) (2020-06-28)
+
+
+### Bug Fixes
+
+* **components:** ensure id passed to CategoryListItem story ([eee21d1](https://github.com/JakeElder/tuscany/commit/eee21d1f26645839588c8e6b23bda267ad44b9e6))
+
+
+
+
+
 ## [0.2.1-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.0...v0.2.1-ic.0) (2020-06-28)
 
 **Note:** Version bump only for package @mindfulstudio/tuscany-components

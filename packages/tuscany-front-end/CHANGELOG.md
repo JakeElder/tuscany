@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1-ic.3](https://github.com/JakeElder/tuscany/compare/v0.2.1-ic.2...v0.2.1-ic.3) (2020-06-28)
+
+
+### Bug Fixes
+
+* change publish dir to support Node v12 ([cbee7ff](https://github.com/JakeElder/tuscany/commit/cbee7ff93cf152c37320614ba85d7d28ffac1510))
+
+
+
+
+
 ## [0.2.1-ic.2](https://github.com/JakeElder/tuscany/compare/v0.2.1-ic.1...v0.2.1-ic.2) (2020-06-28)
 
 **Note:** Version bump only for package @mindfulstudio/tuscany-front-end

@@ -13,6 +13,7 @@
   "dependencies": {
     "@apollo/client": "^3.0.0-rc.8",
     "@mindfulstudio/tuscany-components": "0.1.0-rc.0",
+    "@mindfulstudio/tuscany-tsconfig": "0.0.0",
     "cross-fetch": "^3.0.5",
     "graphql": "^15.1.0",
     "next": "9.3.5",

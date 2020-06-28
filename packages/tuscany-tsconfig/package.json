@@ -1,0 +1,16 @@
+{
+  "name": "@mindfulstudio/tuscany-tsconfig",
+  "version": "0.0.0",
+  "description": "TS Config for Tuscany",
+  "author": "Jake Elder",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

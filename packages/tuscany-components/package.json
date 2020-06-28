@@ -14,6 +14,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@mindfulstudio/tuscany-tsconfig": "0.0.0",
     "@mindfulstudio/tuscany-types": "0.1.0-rc.0"
   },
   "exports": {

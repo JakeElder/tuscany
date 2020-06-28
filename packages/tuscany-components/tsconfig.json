@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@mindfulstudio/tuscany-tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

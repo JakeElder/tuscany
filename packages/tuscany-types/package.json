@@ -14,6 +14,7 @@
     "./": "./types"
   },
   "dependencies": {
+    "@mindfulstudio/tuscany-tsconfig": "0.0.0",
     "superstruct": "^0.10.12"
   },
   "devDependencies": {

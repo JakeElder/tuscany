@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@mindfulstudio/tuscany-tsconfig",
   "exclude": ["node_modules"],
   "include": ["types/*.ts"]
 }

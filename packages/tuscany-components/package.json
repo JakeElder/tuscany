@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-components",
-  "version": "0.2.1-ic.0",
+  "version": "0.2.1-ic.1",
   "description": "Components for Tuscany",
   "scripts": {
     "develop": "start-storybook -p 5010 --ci",

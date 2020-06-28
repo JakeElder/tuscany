@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1-ic.1](https://github.com/JakeElder/tuscany/compare/v0.2.1-ic.0...v0.2.1-ic.1) (2020-06-28)
+
+
+### Bug Fixes
+
+* **front-end:** fix front-end category type error ([15f6b67](https://github.com/JakeElder/tuscany/commit/15f6b67bd4f3d770b91b0592599b46f671884846))
+
+
+
+
+
 ## [0.2.1-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.0...v0.2.1-ic.0) (2020-06-28)
 
 **Note:** Version bump only for package @mindfulstudio/tuscany-front-end

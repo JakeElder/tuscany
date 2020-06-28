@@ -6,6 +6,7 @@
     "develop": "next dev -p 5020",
     "build": "next build",
     "start": "next start",
+    "deploy": "npx vercel deploy --no-clipboard --token=$VERCEL_TOKEN --prod",
     "test": "start-server-and-test develop http://localhost:5000 \"cypress open\"",
     "format": "prettier . --write",
     "typecheck": "tsc --noEmit"

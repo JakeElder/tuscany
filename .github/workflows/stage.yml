@@ -104,9 +104,28 @@ jobs:
             --scope @mindfulstudio/tuscany-components \
             --stream
 
+  deploy_front_end:
+    name: Deploy Front End
+    # needs: publish_packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - name: Deploy Build
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_FRONT_END_PROJECT_ID_STAGE }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: yarn workspace @mindfulstudio/tuscany-front-end deploy
+
   deploy_content:
+    if: false
     name: Deploy Content
-    # needs: publish_packages 
+    needs: publish_packages 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository

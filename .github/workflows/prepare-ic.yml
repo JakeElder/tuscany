@@ -95,9 +95,42 @@ jobs:
           `
           git push --force heroku ${subtree}:master
 
-  # deploy_storybook:
-  #   name: Deploy Storybook
-  #   runs-on: ubuntu-latest
+  deploy_storybook:
+    name: Deploy Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - name: Get Yarn Cache Dir
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install NPM Deps
+        run: yarn install
+      - name: Build
+        run: |
+          npx lerna run build \
+            --scope @mindfulstudio/tuscany-components \
+            --stream
+      - name: Deploy
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_COMPONENTS_PROJECT_ID_STAGE }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx lerna run deploy \
+            --scope @mindfulstudio/tuscany-components \
+            --stream
 
   # deploy_front_end:
   #   name: Deploy front end

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@mindfulstudio/tuscany-components/Header";
 import { useQuery, gql } from "@apollo/client";
+import { Category } from "@mindfulstudio/tuscany-types/Category";
 
 const CATEGORIES = gql`
   query CategoriesQuery {
@@ -21,7 +22,7 @@ export default function Index() {
     return <p>{error.message}</p>;
   }
 
-  const { categories } = data;
+  const { categories }: { categories: Category[] } = data;
 
   return (
     <div>

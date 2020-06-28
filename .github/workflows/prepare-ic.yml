@@ -85,6 +85,8 @@ jobs:
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Pull changes
+        run: git pull
       - name: Push to Heroku
         run: |
           git remote add heroku git@heroku.com:tuscany-content.git
@@ -116,6 +118,8 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+      - name: Pull changes
+        run: git pull
       - name: Install NPM Deps
         run: yarn install
       - name: Build
@@ -144,6 +148,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "14"
+      - name: Pull changes
+        run: git pull
       - name: Deploy Build
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

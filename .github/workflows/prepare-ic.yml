@@ -73,12 +73,30 @@ jobs:
       - name: Publish
         run: npx lerna publish from-package --yes
 
+  deploy_strapi:
+    name: Deploy Strapi
+    runs-on: ubuntu-latest
+    needs: publish_packages_to_npm 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: Push to Heroku
+        run: |
+          git remote add heroku git@heroku.com:tuscany-content.git
+          subtree=`
+            git subtree split \
+              --prefix packages/tuscany-content \
+              ${GITHUB_REF}
+          `
+          git push --force heroku ${subtree}:master
+
   # deploy_storybook:
   #   name: Deploy Storybook
-  #   runs-on: ubuntu-latest
-
-  # deploy_strapi:
-  #   name: Deploy Strapi
   #   runs-on: ubuntu-latest
 
   # deploy_front_end:

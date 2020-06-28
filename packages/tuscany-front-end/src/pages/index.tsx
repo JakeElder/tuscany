@@ -21,10 +21,17 @@ export default function Index() {
     return <p>{error.message}</p>;
   }
 
+  const { categories } = data;
+
   return (
     <div>
       <Header>chiangdao.guide</Header>
       <h2>Categories</h2>
+      <ul>
+        {categories.map((category) => {
+          return <li key={category.id}>{category.name}</li>;
+        })}
+      </ul>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );

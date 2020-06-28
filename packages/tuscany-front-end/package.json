@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-front-end",
-  "version": "0.2.0",
+  "version": "0.2.1-ic.0",
   "private": true,
   "scripts": {
     "develop": "next dev -p 5020",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-rc.8",
-    "@mindfulstudio/tuscany-components": "0.2.0",
+    "@mindfulstudio/tuscany-components": "0.2.1-ic.0",
     "@mindfulstudio/tuscany-tsconfig": "0.2.0",
     "cross-fetch": "^3.0.5",
     "graphql": "^15.1.0",

@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-types",
-  "version": "0.2.0",
+  "version": "0.2.1-ic.0",
   "description": "Types for Tuscany",
   "author": "Jake Elder",
   "scripts": {

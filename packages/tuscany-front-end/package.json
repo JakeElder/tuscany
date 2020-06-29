@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-front-end",
-  "version": "0.2.1-ic.3",
+  "version": "0.2.1-ic.4",
   "private": true,
   "scripts": {
     "develop": "next dev -p 5020",

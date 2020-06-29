@@ -1,14 +1,9 @@
 name: Prepare Integration Candidate
 
-# on:
-#   pull_request:
-#     branches:
-#       - develop
-
 on:
-  push:
+  pull_request:
     branches:
-      feature/*
+      - develop
 
 jobs:
   establish_changed:
@@ -19,30 +14,57 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: "14"
       - name: Run Lerna changed
+        shell: bash --noprofile --norc {0}
         run: |
-          npx lerna changed --all --json | \
-          npx jq 'map(.name)' > \
-          changed.json
+          npx lerna changed --all --json > changed.json
+          if [ $? -eq 1 ]
+          then
+            echo '[]' > changed.json
+            exit 0
+          fi
       - name: Upload changed.json
         uses: actions/upload-artifact@v1
         with:
           name: changed
-          path: ./changed.json
+          path: changed.json
 
   publish_packages_to_npm:
     name: Publish packages to NPM
     needs: establish_changed
     runs-on: ubuntu-latest
     steps:
+      - name: Restore changed.json
+        uses: actions/download-artifact@v1
+        with:
+          name: changed
+          path: .
+      - name: Establish required jobs
+        id: establish_required_jobs
+        run: |
+          num_changed_private=$( \
+            cat changed.json | npx jq '[.[] | select(.private == true)] | length')
+          num_changed_public=$(\
+            cat changed.json | npx jq '[.[] | select(.private == false)] | length')
+          echo "::set-output name=num_changed_private::$num_changed_private"
+          echo "::set-output name=num_changed_public::$num_changed_public"
+      - name: Test outputs
+        env:
+          NUM_CHANGED_PRIVATE: >
+            ${{ steps.establish_required_jobs.outputs.num_changed_private }}
+          NUM_CHANGED_PUBLIC: >
+            ${{ steps.establish_required_jobs.outputs.num_changed_public }}
+        run: echo "${NUM_CHANGED_PRIVATE} ${NUM_CHANGED_PUBLIC}"
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
@@ -76,34 +98,38 @@ jobs:
   deploy_strapi:
     name: Deploy Strapi
     runs-on: ubuntu-latest
-    needs: publish_packages_to_npm 
+    needs: publish_packages_to_npm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - name: Pull changes
-        run: git pull
+      - name: Git log
+        run: git log
       - name: Push to Heroku
         run: |
           git remote add heroku git@heroku.com:tuscany-content.git
           subtree=`
             git subtree split \
               --prefix packages/tuscany-content \
-              ${GITHUB_REF}
+              HEAD
           `
           git push --force heroku ${subtree}:master
 
   deploy_storybook:
     name: Deploy Storybook
     runs-on: ubuntu-latest
-    needs: publish_packages_to_npm 
+    needs: publish_packages_to_npm
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
@@ -119,7 +145,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Pull changes
-        run: git pull
+        run: git log
       - name: Install NPM Deps
         run: yarn install
       - name: Build
@@ -137,19 +163,21 @@ jobs:
             --scope @mindfulstudio/tuscany-components \
             --stream
 
-  deploy_front_end:
-    name: Deploy front end
-    needs: publish_packages_to_npm 
+  deploy_next_js_app:
+    name: Deploy Next.js app
+    needs: publish_packages_to_npm
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
           node-version: "14"
-      - name: Pull changes
-        run: git pull
+      - name: Git log
+        run: git log
       - name: Deploy Build
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}

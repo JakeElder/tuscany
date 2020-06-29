@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-types",
-  "version": "0.2.1-ic.3",
+  "version": "0.2.1",
   "description": "Types for Tuscany",
   "author": "Jake Elder",
   "scripts": {
@@ -13,7 +13,7 @@
     "directory": "types"
   },
   "dependencies": {
-    "@mindfulstudio/tuscany-tsconfig": "0.2.1-ic.2",
+    "@mindfulstudio/tuscany-tsconfig": "0.2.1",
     "superstruct": "^0.10.12"
   },
   "devDependencies": {

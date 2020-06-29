@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-tsconfig",
-  "version": "0.2.1-ic.2",
+  "version": "0.2.1",
   "description": "TS Config for Tuscany",
   "author": "Jake Elder",
   "main": "tsconfig.json",

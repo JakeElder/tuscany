@@ -1,0 +1,41 @@
+#!/bin/sh
+
+mkdir -p .tmp
+rm -f .tmp/dump.gz
+
+
+docker run \
+  --rm \
+  --network host \
+  mongo:4.2.8 \
+    mongodump \
+      --uri=$1 \
+      --archive \
+      --gzip \
+    | cat > .tmp/dump.gz
+
+[[ $? -eq 0 ]] || exit 1
+
+
+docker run \
+  --rm \
+  --network host \
+  mongo:4.2.8 \
+    mongo $2 --eval "db.dropDatabase()"
+
+[[ $? -eq 0 ]] || exit 1
+
+
+cat .tmp/dump.gz | docker run \
+  -i \
+  --rm \
+  --network host \
+  mongo:4.2.8 \
+    mongorestore \
+      --verbose \
+      --uri=$2 \
+      --archive \
+      --gzip \
+      --nsFrom "tuscany_stage.*" \
+      --nsTo "tuscany.*"
+

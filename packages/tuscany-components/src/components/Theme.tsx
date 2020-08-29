@@ -2,20 +2,17 @@ import React from "react";
 import { Global, css } from "@emotion/core";
 import { css as ssCSS } from "@styled-system/css";
 import { ThemeProvider } from "emotion-theming";
-import "reset-css";
 
 const globalCSS = css`
   @font-face {
     font-family: "Fantasque";
-    src: local("Fantasque Sans Mono Regular"),
-      url(${require("../fonts/fantasque-sans-mono/FantasqueSansMono-Regular.woff2")});
+    src: local("Fantasque Sans Mono Regular");
   }
 
   @font-face {
     font-family: "Fantasque";
     font-weight: 700;
-    src: local("Fantasque Sans Mono Bold"),
-      url(${require("../fonts/fantasque-sans-mono/FantasqueSansMono-Bold.woff2")});
+    src: local("Fantasque Sans Mono Bold");
   }
 `;
 

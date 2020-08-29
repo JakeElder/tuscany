@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "paths": {
       "@mindfulstudio/tuscany-types/*": ["../tuscany-types/types/*"],
-      "@mindfulstudio/tuscany-components/*": ["../tuscany-components/src/*"]
+      "@mindfulstudio/tuscany-components/*": [
+        "../tuscany-components/src/components/*"
+      ]
     }
   },
   "exclude": ["node_modules"],

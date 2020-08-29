@@ -1,4 +1,6 @@
 import { AppProps } from "next/app";
+import { CacheProvider } from "@emotion/core";
+import { cache } from "emotion";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
 import fetch from "cross-fetch";
@@ -11,11 +13,15 @@ const client = new ApolloClient({
   }),
 });
 
+// import { globalStyles } from "../shared/styles";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
+    <CacheProvider value={cache}>
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+    </CacheProvider>
   );
 }
 

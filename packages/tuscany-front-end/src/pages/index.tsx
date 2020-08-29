@@ -1,5 +1,7 @@
 import React from "react";
-import Header from "@mindfulstudio/tuscany-components/Header";
+import Theme from "@mindfulstudio/tuscany-components/Theme";
+import { css } from "@emotion/core";
+import IndexPage from "@mindfulstudio/tuscany-components/IndexPage";
 import { useQuery, gql } from "@apollo/client";
 import { Category } from "@mindfulstudio/tuscany-types/Category";
 
@@ -23,17 +25,29 @@ export default function Index() {
   }
 
   const { categories }: { categories: Category[] } = data;
-
   return (
-    <div>
-      <Header>chiangdao.guide</Header>
-      <h2>Categories</h2>
-      <ul>
-        {categories.map((category) => {
-          return <li key={category.id}>{category.name}</li>;
-        })}
-      </ul>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    <Theme>
+      <div
+        css={css`
+          color: red;
+        `}
+      >
+        colored
+      </div>
+      <IndexPage categories={categories} />
+    </Theme>
   );
+
+  // return (
+  //   <div>
+  //     <Header>chiangdao.guide</Header>
+  //     <h2>Categories</h2>
+  //     <ul>
+  //       {categories.map((category) => {
+  //         return <li key={category.id}>{category.name}</li>;
+  //       })}
+  //     </ul>
+  //     <pre>{JSON.stringify(data, null, 2)}</pre>
+  //   </div>
+  // );
 }

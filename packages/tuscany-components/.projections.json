@@ -1,10 +1,10 @@
 {
-  "src/*.tsx": {
+  "src/components/*.tsx": {
     "alternate": "stories/{}.stories.tsx",
     "type": "component"
   },
   "stories/*.stories.tsx": {
-    "alternate": "src/{}.tsx",
+    "alternate": "src/components/{}.tsx",
     "type": "story"
   }
 }

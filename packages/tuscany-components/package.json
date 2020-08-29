@@ -1,7 +1,8 @@
 {
   "name": "@mindfulstudio/tuscany-components",
   "version": "0.2.1",
-  "description": "Components for Tuscany",
+  "description": "UI Library for Tuscany",
+  "license": "UNLICENSED",
   "scripts": {
     "develop": "start-storybook -p 5010 --ci",
     "build": "build-storybook --output-dir build",
@@ -16,16 +17,30 @@
     "directory": "src"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@emotion/styled-base": "^10.0.31",
     "@mindfulstudio/tuscany-tsconfig": "0.2.1",
-    "@mindfulstudio/tuscany-types": "0.2.1"
+    "@mindfulstudio/tuscany-types": "0.2.1",
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
+    "@types/lodash": "^4.14.159",
+    "emotion-theming": "^10.0.27",
+    "lodash": "^4.17.19",
+    "reset-css": "^5.0.1",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-links": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/preset-typescript": "^3.0.0",
-    "@storybook/react": "^5.3.19",
+    "@storybook/addon-backgrounds": "^6.0.12",
+    "@storybook/addon-controls": "^6.0.12",
+    "@storybook/addon-docs": "^6.0.12",
+    "@storybook/addon-viewport": "^6.0.12",
+    "@storybook/addons": "^6.0.12",
+    "@storybook/react": "^6.0.12",
+    "@types/styled-system": "^5.1.10",
+    "@types/styled-system__css": "^5.0.13",
+    "@types/styled-system__should-forward-prop": "^5.1.1",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "prettier": "^2.0.5",

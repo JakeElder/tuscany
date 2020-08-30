@@ -1,4 +1,5 @@
-import { AppProps } from "next/app";
+import NextApp from "next/app";
+import { ThemeProvider } from "@emotion/react";
 import { CacheProvider } from "@emotion/core";
 import { cache } from "emotion";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
@@ -13,16 +14,17 @@ const client = new ApolloClient({
   }),
 });
 
-// import { globalStyles } from "../shared/styles";
-
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <CacheProvider value={cache}>
-      <ApolloProvider client={client}>
-        <Component {...pageProps} />
-      </ApolloProvider>
-    </CacheProvider>
-  );
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <ThemeProvider theme={{ thing: "red" }}>
+        <CacheProvider value={cache}>
+          <ApolloProvider client={client}>
+            <Component {...pageProps} />
+          </ApolloProvider>
+        </CacheProvider>
+      </ThemeProvider>
+    );
+  }
 }
-
-export default MyApp;

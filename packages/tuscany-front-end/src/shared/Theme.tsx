@@ -44,9 +44,7 @@ function Theme({ children }: React.PropsWithChildren<{}>) {
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalCSS} />
-      <div css={ssCSS({ fontFamily: "body", color: "link.0" })}>
-        wat{children}
-      </div>
+      <div css={ssCSS({ fontFamily: "body", color: "link.0" })}>{children}</div>
     </ThemeProvider>
   );
 }

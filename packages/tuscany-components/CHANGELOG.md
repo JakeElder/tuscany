@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.1...v0.3.0-ic.0) (2020-08-31)
+
+
+### Features
+
+* IndexPage in front end ([65282b6](https://github.com/JakeElder/tuscany/commit/65282b674d74eeadc096853dd0761423a24f470d))
+* **components:** add IndexPage ([c34ad6b](https://github.com/JakeElder/tuscany/commit/c34ad6b501f256bfbbc04638897f503d9e472aa5))
+
+
+
+
+
 ## [0.2.1](https://github.com/JakeElder/tuscany/compare/v0.2.0...v0.2.1) (2020-06-29)
 
 

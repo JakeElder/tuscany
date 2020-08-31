@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { useQuery, gql } from "@apollo/client";
 import { Category } from "@mindfulstudio/tuscany-types/Category";
+import LoadingPage from "../components/LoadingPage";
 import IndexPage from "../components/IndexPage";
 
 const CATEGORIES = gql`
@@ -9,14 +9,16 @@ const CATEGORIES = gql`
     categories {
       id
       name
+      slug
     }
   }
 `;
 
 export default function Index() {
   const { loading, error, data } = useQuery(CATEGORIES);
+
   if (loading) {
-    return <p>loading...</p>;
+    return <LoadingPage />;
   }
 
   if (error) {

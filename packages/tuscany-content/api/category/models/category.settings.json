@@ -18,6 +18,10 @@
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

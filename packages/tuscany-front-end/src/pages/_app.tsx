@@ -1,3 +1,4 @@
+import type { AppProps } from "next/app";
 import { CacheProvider } from "@emotion/react";
 import { cache } from "@emotion/css";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
@@ -12,11 +13,14 @@ const client = new ApolloClient({
     uri: process.env.GRAPHQL_URL,
     fetch,
   }),
+  defaultOptions: {
+    watchQuery: {
+      pollInterval: parseInt(process.env.POLL_INTERVAL as string, 10),
+    },
+  },
 });
 
-const theme = { colors: { green: "#009900" } };
-
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Theme>
       {globalStyles}

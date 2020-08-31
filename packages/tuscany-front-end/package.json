@@ -24,6 +24,7 @@
     "@mindfulstudio/tuscany-types": "0.2.1",
     "cross-fetch": "^3.0.5",
     "graphql": "^15.1.0",
+    "lodash": "^4.17.20",
     "next": "^9.5.2",
     "next-transpile-modules": "^4.1.0",
     "react": "16.13.1",

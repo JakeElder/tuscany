@@ -17,16 +17,15 @@
     "directory": "src"
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.27",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@emotion/styled-base": "^10.0.31",
+    "@emotion/babel-preset-css-prop": "^11.0.0-next.10",
+    "@emotion/css": "11.0.0-next.12",
+    "@emotion/react": "11.0.0-next.12",
+    "@emotion/styled": "11.0.0-next.12",
     "@mindfulstudio/tuscany-tsconfig": "0.2.1",
     "@mindfulstudio/tuscany-types": "0.2.1",
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@types/lodash": "^4.14.159",
-    "emotion-theming": "^10.0.27",
     "lodash": "^4.17.19",
     "reset-css": "^5.0.1",
     "styled-system": "^5.1.5"

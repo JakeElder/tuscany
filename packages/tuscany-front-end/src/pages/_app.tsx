@@ -1,10 +1,10 @@
-import NextApp from "next/app";
-import { ThemeProvider } from "@emotion/react";
-import { CacheProvider } from "@emotion/core";
-import { cache } from "emotion";
+import { CacheProvider } from "@emotion/react";
+import { cache } from "@emotion/css";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
 import fetch from "cross-fetch";
+import { globalStyles } from "../shared/styles";
+import Theme from "../components/Theme";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -14,17 +14,17 @@ const client = new ApolloClient({
   }),
 });
 
-export default class App extends NextApp {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <ThemeProvider theme={{ thing: "red" }}>
-        <CacheProvider value={cache}>
-          <ApolloProvider client={client}>
-            <Component {...pageProps} />
-          </ApolloProvider>
-        </CacheProvider>
-      </ThemeProvider>
-    );
-  }
+const theme = { colors: { green: "#009900" } };
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Theme>
+      {globalStyles}
+      <CacheProvider value={cache}>
+        <ApolloProvider client={client}>
+          <Component {...pageProps} />
+        </ApolloProvider>
+      </CacheProvider>
+    </Theme>
+  );
 }

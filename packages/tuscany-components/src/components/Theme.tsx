@@ -1,7 +1,6 @@
 import React from "react";
-import { Global, css } from "@emotion/core";
+import { Global, css, ThemeProvider } from "@emotion/react";
 import { css as ssCSS } from "@styled-system/css";
-import { ThemeProvider } from "emotion-theming";
 
 const globalCSS = css`
   @font-face {
@@ -44,9 +43,7 @@ function Theme({ children }: React.PropsWithChildren<{}>) {
   return (
     <ThemeProvider theme={theme}>
       <Global styles={globalCSS} />
-      <div css={ssCSS({ fontFamily: "body", color: "link.0" })}>
-        wat{children}
-      </div>
+      <div css={ssCSS({ fontFamily: "body", color: "link.0" })}>{children}</div>
     </ThemeProvider>
   );
 }

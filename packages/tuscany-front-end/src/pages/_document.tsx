@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from "next/document";
-import { extractCritical } from "emotion-server";
+import { extractCritical } from "@emotion/server";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
@@ -22,7 +22,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head />
+        <Head>
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/reset-css@5.0.1/reset.css"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

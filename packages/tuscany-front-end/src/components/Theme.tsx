@@ -1,5 +1,5 @@
 import React from "react";
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/react";
 import { css as ssCSS } from "@styled-system/css";
 import { ThemeProvider } from "@emotion/react";
 

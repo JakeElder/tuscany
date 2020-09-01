@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.3](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.2...v0.3.0-ic.3) (2020-09-01)
+
+
+### Bug Fixes
+
+* actually fix what I just tried to fix ([9564dfe](https://github.com/JakeElder/tuscany/commit/9564dfedb294ec0d5a0d93b26bda90fe38299715))
+
+
+
+
+
 # [0.3.0-ic.2](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.1...v0.3.0-ic.2) (2020-09-01)
 
 

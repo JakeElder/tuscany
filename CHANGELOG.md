@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.2](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.1...v0.3.0-ic.2) (2020-09-01)
+
+
+### Bug Fixes
+
+* fix styling and missing dep ([875d096](https://github.com/JakeElder/tuscany/commit/875d09638c6d8044dd4e5e683b2914243a431140))
+
+
+
+
+
 # [0.3.0-ic.1](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.0...v0.3.0-ic.1) (2020-09-01)
 
 

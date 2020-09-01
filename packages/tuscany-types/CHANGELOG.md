@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.1](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.0...v0.3.0-ic.1) (2020-09-01)
+
+
+### Features
+
+* add Google map ([3f1a842](https://github.com/JakeElder/tuscany/commit/3f1a84208f2b54c8d71b82f2436cfaace1c699a2))
+
+
+
+
+
 # [0.3.0-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.1...v0.3.0-ic.0) (2020-08-31)
 
 

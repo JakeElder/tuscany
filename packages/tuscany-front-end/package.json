@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-front-end",
-  "version": "0.3.0-ic.0",
+  "version": "0.3.0-ic.1",
   "private": true,
   "scripts": {
     "develop": "next dev -p 5020",
@@ -19,9 +19,9 @@
     "@emotion/react": "11.0.0-next.12",
     "@emotion/server": "11.0.0-next.12",
     "@emotion/styled": "11.0.0-next.12",
-    "@mindfulstudio/tuscany-components": "0.3.0-ic.0",
+    "@mindfulstudio/tuscany-components": "0.3.0-ic.1",
     "@mindfulstudio/tuscany-tsconfig": "0.2.1",
-    "@mindfulstudio/tuscany-types": "0.3.0-ic.0",
+    "@mindfulstudio/tuscany-types": "0.3.0-ic.1",
     "cross-fetch": "^3.0.5",
     "graphql": "^15.1.0",
     "lodash": "^4.17.20",

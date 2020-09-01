@@ -27,6 +27,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/reset-css@5.0.1/reset.css"
           />
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsqxtRNBsiwT67h0KwuK3e8Ikp9JDNQyE&libraries=&v=weekly"></script>
         </Head>
         <body>
           <Main />

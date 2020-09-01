@@ -10,6 +10,7 @@ const PLACE = gql`
     places(where: { slug: $slug }) {
       nameRoman
       description
+      coordinates
     }
   }
 `;

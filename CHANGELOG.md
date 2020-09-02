@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.7](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.6...v0.3.0-ic.7) (2020-09-02)
+
+
+### Bug Fixes
+
+* fix mongoose package ([65867ec](https://github.com/JakeElder/tuscany/commit/65867ec0c92c070894fa71cfa1eda4905cce2488))
+* force rebuild ([bea7113](https://github.com/JakeElder/tuscany/commit/bea711307c144427d31241780a0bc5bce449d902))
+
+
+
+
+
 # [0.3.0-ic.6](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.5...v0.3.0-ic.6) (2020-09-02)
 
 

@@ -89,7 +89,7 @@ function IndexPage({ categories }: Props) {
               marginBottom: 2,
             })}
           >
-            Come to Chiang Dao
+            Stay in Chiang Dao
           </h2>
           <CategoryTile href="/places-to-stay" name="Places to Stay" />
           <CategoryTile href="/land-for-sale" name="Land for Sale" />

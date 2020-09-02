@@ -7,14 +7,14 @@ const globalCSS = css`
   @font-face {
     font-family: "Fantasque";
     src: local("Fantasque Sans Mono Regular"),
-      url(/static/fonts/fantasque-sans-mono/FantasqueSansMono-Regular.woff2);
+      url(/fonts/fantasque-sans-mono/FantasqueSansMono-Regular.woff2);
   }
 
   @font-face {
     font-family: "Fantasque";
     font-weight: 700;
     src: local("Fantasque Sans Mono Bold"),
-      url(/static/fonts/fantasque-sans-mono/FantasqueSansMono-Bold.woff2);
+      url(/fonts/fantasque-sans-mono/FantasqueSansMono-Bold.woff2);
   }
 `;
 

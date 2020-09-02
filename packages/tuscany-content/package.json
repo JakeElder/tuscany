@@ -1,7 +1,7 @@
 {
   "name": "@mindfulstudio/tuscany-content",
   "private": true,
-  "version": "0.3.0-ic.0",
+  "version": "0.3.0-ic.4",
   "description": "CMS for Tuscany",
   "scripts": {
     "develop": "strapi develop",

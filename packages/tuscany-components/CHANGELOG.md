@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.4](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.3...v0.3.0-ic.4) (2020-09-02)
+
+**Note:** Version bump only for package @mindfulstudio/tuscany-components
+
+
+
+
+
 # [0.3.0-ic.1](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.0...v0.3.0-ic.1) (2020-09-01)
 
 **Note:** Version bump only for package @mindfulstudio/tuscany-components

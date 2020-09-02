@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.4](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.3...v0.3.0-ic.4) (2020-09-02)
+
+
+### Features
+
+* add /places-to-stay/[property] route ([3cc068e](https://github.com/JakeElder/tuscany/commit/3cc068e69fd5a4518093836f868ae1582d41bdab))
+
+
+
+
+
 # [0.3.0-ic.3](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.2...v0.3.0-ic.3) (2020-09-01)
 
 

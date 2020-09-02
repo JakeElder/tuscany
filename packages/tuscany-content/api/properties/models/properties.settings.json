@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "Properties"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "fullDescription": {
+      "type": "richtext"
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "shortDescription",
+      "required": true
+    },
+    "availableForRent": {
+      "type": "boolean",
+      "default": false
+    },
+    "availableForSale": {
+      "type": "boolean"
+    }
+  }
+}

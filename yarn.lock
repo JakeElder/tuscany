@@ -2567,11 +2567,6 @@
     "@emotion/sheet" "0.9.4"
     "@emotion/utils" "0.11.3"
 
-"@emotion/core@^11.0.0-next.10":
-  version "11.0.0-next.10"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-11.0.0-next.10.tgz#a020be64ccd72cab5906054411b21c464702d3a5"
-  integrity sha512-BlOsLD9qPUNgYI81maQC0jUuc7i5Ql1K/LtGX9HDX1krLKjkKayh3Q9ASMEbpVM88jvAphyvKlKETfF5Go8NWQ==
-
 "@emotion/css@11.0.0-next.12":
   version "11.0.0-next.12"
   resolved "https://registry.yarnpkg.com/@emotion/css/-/css-11.0.0-next.12.tgz#b25618539206f0c1148333f03289d190b5bd5f85"

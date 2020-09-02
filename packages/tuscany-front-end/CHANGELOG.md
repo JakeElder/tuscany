@@ -16,37 +16,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.3.0-ic.2](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.1...v0.3.0-ic.2) (2020-09-01)
 
-
 ### Bug Fixes
 
-* fix styling and missing dep ([875d096](https://github.com/JakeElder/tuscany/commit/875d09638c6d8044dd4e5e683b2914243a431140))
-
-
-
-
+- fix styling and missing dep ([875d096](https://github.com/JakeElder/tuscany/commit/875d09638c6d8044dd4e5e683b2914243a431140))
 
 # [0.3.0-ic.1](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.0...v0.3.0-ic.1) (2020-09-01)
 
-
 ### Features
 
-* add Google map ([3f1a842](https://github.com/JakeElder/tuscany/commit/3f1a84208f2b54c8d71b82f2436cfaace1c699a2))
-
-
-
-
+- add Google map ([3f1a842](https://github.com/JakeElder/tuscany/commit/3f1a84208f2b54c8d71b82f2436cfaace1c699a2))
 
 # [0.3.0-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.1...v0.3.0-ic.0) (2020-08-31)
 
-
 ### Features
 
-* IndexPage in front end ([65282b6](https://github.com/JakeElder/tuscany/commit/65282b674d74eeadc096853dd0761423a24f470d))
-* rough v1 ([2204b75](https://github.com/JakeElder/tuscany/commit/2204b75a255e54e28ac8ee4f69d85ff6e0a7bd40))
-
-
-
-
+- IndexPage in front end ([65282b6](https://github.com/JakeElder/tuscany/commit/65282b674d74eeadc096853dd0761423a24f470d))
+- rough v1 ([2204b75](https://github.com/JakeElder/tuscany/commit/2204b75a255e54e28ac8ee4f69d85ff6e0a7bd40))
 
 ## [0.2.1](https://github.com/JakeElder/tuscany/compare/v0.2.0...v0.2.1) (2020-06-29)
 

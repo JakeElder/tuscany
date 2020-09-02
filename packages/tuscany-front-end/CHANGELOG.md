@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.9](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.8...v0.3.0-ic.9) (2020-09-02)
+
+
+### Bug Fixes
+
+* correct font link ([37b8d3a](https://github.com/JakeElder/tuscany/commit/37b8d3acfd8ae75dab4d234f90a6eadab23a2728))
+
+
+
+
+
 # [0.3.0-ic.8](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.7...v0.3.0-ic.8) (2020-09-02)
 
 

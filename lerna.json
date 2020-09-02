@@ -1,6 +1,6 @@
 {
   "npmClient": "yarn",
-  "version": "0.3.0-ic.8",
+  "version": "0.3.0-ic.9",
   "useWorkspaces": true,
   "command": {
     "version": {

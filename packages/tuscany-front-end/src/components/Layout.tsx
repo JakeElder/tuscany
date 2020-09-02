@@ -6,6 +6,7 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
     <div
       css={css({
         paddingY: 4,
+        paddingX: 3,
       })}
     >
       {children}

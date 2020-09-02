@@ -35,7 +35,5 @@ cat .tmp/dump.gz | docker run \
       --verbose \
       --uri=$2 \
       --archive \
-      --gzip \
-      --nsFrom "tuscany_stage.*" \
-      --nsTo "tuscany.*"
+      --gzip
 

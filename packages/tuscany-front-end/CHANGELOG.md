@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.8](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.7...v0.3.0-ic.8) (2020-09-02)
+
+
+### Bug Fixes
+
+* fix padding and missing web font ([c2fd3e0](https://github.com/JakeElder/tuscany/commit/c2fd3e0d27fc3234203bc5e3ec56a23a7590d5f9))
+
+
+
+
+
 # [0.3.0-ic.5](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.4...v0.3.0-ic.5) (2020-09-02)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.5](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.4...v0.3.0-ic.5) (2020-09-02)
+
+
+### Features
+
+* add /land-for-sale route ([37a362d](https://github.com/JakeElder/tuscany/commit/37a362df38b3da8a2298057e607f82e00dac1e82))
+* add /land-for-sale/[plot].tsx ([0eb3f57](https://github.com/JakeElder/tuscany/commit/0eb3f575a0b29625066aff02842afe46cdada7be))
+* add /places-to-stay route ([d06f826](https://github.com/JakeElder/tuscany/commit/d06f8265f31317686824b98437be7c34688e4383))
+* update index page ([a1f2496](https://github.com/JakeElder/tuscany/commit/a1f24965d09712999dba5e69890b8f982884d69e))
+
+
+
+
+
 # [0.3.0-ic.4](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.3...v0.3.0-ic.4) (2020-09-02)
 
 

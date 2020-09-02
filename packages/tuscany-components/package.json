@@ -1,6 +1,6 @@
 {
   "name": "@mindfulstudio/tuscany-components",
-  "version": "0.3.0-ic.4",
+  "version": "0.3.0-ic.5",
   "description": "UI Library for Tuscany",
   "license": "UNLICENSED",
   "scripts": {
@@ -22,7 +22,7 @@
     "@emotion/react": "11.0.0-next.12",
     "@emotion/styled": "11.0.0-next.12",
     "@mindfulstudio/tuscany-tsconfig": "0.2.1",
-    "@mindfulstudio/tuscany-types": "0.3.0-ic.4",
+    "@mindfulstudio/tuscany-types": "0.3.0-ic.5",
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@types/lodash": "^4.14.159",

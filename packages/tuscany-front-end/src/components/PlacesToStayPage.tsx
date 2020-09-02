@@ -20,7 +20,7 @@ type PlaceToStayLinkProps = {
 function PlaceToStayLink({ name, url }: PlaceToStayLinkProps) {
   return (
     <li css={css({ listStyle: "disc inside", marginBottom: 1 })}>
-      <Link href="/places-to-stay/[place]" as={url} passHref>
+      <Link href="/places-to-stay/[property]" as={url} passHref>
         <a
           css={css({
             cursor: "pointer",

@@ -13,13 +13,14 @@ export type Props = {
 };
 
 type CategoryTileProps = {
+  href: string;
   name: string;
-  url: string;
+  url?: string;
 };
 
-function CategoryTile({ name, url }: CategoryTileProps) {
+function CategoryTile({ href, name, url }: CategoryTileProps) {
   return (
-    <Link href="[category]" as={url} passHref>
+    <Link href={href} as={url} passHref>
       <a
         css={css({
           cursor: "pointer",
@@ -52,9 +53,47 @@ function IndexPage({ categories }: Props) {
     <Layout>
       <Container>
         <Header />
-        {categories.map((c) => (
-          <CategoryTile key={c.name} name={c.name} url={c.slug} />
-        ))}
+        <hr
+          css={css({
+            mb: 4,
+            border: "1px dashed",
+            borderColor: "shades.8",
+          })}
+        />
+        <div
+          css={css({
+            mb: 4,
+          })}
+        >
+          <h2
+            css={css({
+              fontSize: 3,
+              marginBottom: 2,
+            })}
+          >
+            Things to Do
+          </h2>
+          {categories.map((c) => (
+            <CategoryTile
+              key={c.name}
+              href="/[category]"
+              name={c.name}
+              url={c.slug}
+            />
+          ))}
+        </div>
+        <div>
+          <h2
+            css={css({
+              fontSize: 3,
+              marginBottom: 2,
+            })}
+          >
+            Come to Chiang Dao
+          </h2>
+          <CategoryTile href="/places-to-stay" name="Places to Stay" />
+          <CategoryTile href="/land-for-sale" name="Land for Sale" />
+        </div>
       </Container>
     </Layout>
   );

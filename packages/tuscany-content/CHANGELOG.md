@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.6](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.5...v0.3.0-ic.6) (2020-09-02)
+
+
+### Bug Fixes
+
+* amend migrate script, remove redundant config ([86ef785](https://github.com/JakeElder/tuscany/commit/86ef7850d9e30b9e44fe13f5c8c72494d690752f))
+
+
+
+
+
 # [0.3.0-ic.5](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.4...v0.3.0-ic.5) (2020-09-02)
 
 

@@ -9,7 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "format": "prettier . --write",
-    "migrate": "scripts/migrate"
+    "migrate:db:stage": "./scripts/migrate $DATABASE_URI $STAGE_DATABASE_URI"
   },
   "dependencies": {
     "knex": "<0.20.0",

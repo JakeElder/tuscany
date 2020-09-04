@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.11](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.10...v0.3.0-ic.11) (2020-09-04)
+
+**Note:** Version bump only for package workspace
+
+
+
+
+
 # [0.3.0-ic.10](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.9...v0.3.0-ic.10) (2020-09-04)
 
 

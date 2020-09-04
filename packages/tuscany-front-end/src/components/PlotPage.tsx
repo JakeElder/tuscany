@@ -4,23 +4,26 @@ import { css } from "@styled-system/css";
 import Header from "./Header";
 import Container from "./Container";
 import Layout from "./Layout";
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withGoogleMap, GoogleMap, Polygon } from "react-google-maps";
+import averageGeolocation from "src/utils/average-geolocation";
 
 export type Props = {
   plot: Plot;
 };
 
 function PlotPage({ plot }: Props) {
-  const [lat, lng] = plot.location.split(/\s?,\s?/);
+  const paths = plot.location.split("\n").map((c) => {
+    const [lat, lng] = c.split(/\s?,\s?/).map(parseFloat);
+    return { lat, lng };
+  });
+
   return (
     <Layout>
       <Container>
         <Header />
         <h1 css={css({ fontSize: 4, marginBottom: 3 })}>{plot.name}</h1>
         <Map
-          lat={parseFloat(lat)}
-          lng={parseFloat(lng)}
-          loadingElement={<div style={{ height: `100%` }} />}
+          paths={paths}
           containerElement={
             <div
               style={{ height: `200px` }}
@@ -42,10 +45,18 @@ function PlotPage({ plot }: Props) {
   );
 }
 
-const Map = withGoogleMap(({ lat, lng }: any) => {
+const Map = withGoogleMap(({ paths }: any) => {
   return (
-    <GoogleMap defaultZoom={17} defaultCenter={{ lat, lng }}>
-      <Marker position={{ lat, lng }} />
+    <GoogleMap defaultZoom={3} defaultCenter={averageGeolocation(paths)}>
+      <Polygon
+        paths={paths}
+        options={{
+          strokeColor: "#75B85A",
+          fillColor: "#75B85A",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+        }}
+      />
     </GoogleMap>
   );
 });

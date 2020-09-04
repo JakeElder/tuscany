@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.10](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.9...v0.3.0-ic.10) (2020-09-04)
+
+
+### Features
+
+* add plot mapping in Google Maps ([13cc937](https://github.com/JakeElder/tuscany/commit/13cc937007f17d9d0fdd3b53362b9a95170cdc47))
+
+
+
+
+
 # [0.3.0-ic.7](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.6...v0.3.0-ic.7) (2020-09-02)
 
 

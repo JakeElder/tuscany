@@ -7,5 +7,6 @@
     "alternate": ["src/{}.tsx", "src/{}.ts"],
     "type": "test"
   },
-  "src/pages/*.tsx": { "type": "page" }
+  "src/pages/*.tsx": { "type": "page" },
+  "src/components/*.tsx": { "type": "component" }
 }

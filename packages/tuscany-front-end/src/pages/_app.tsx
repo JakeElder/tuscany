@@ -1,7 +1,11 @@
-import { AppProps } from "next/app";
+import type { AppProps } from "next/app";
+import { CacheProvider } from "@emotion/react";
+import { cache } from "@emotion/css";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
 import fetch from "cross-fetch";
+import { globalStyles } from "../shared/styles";
+import Theme from "../components/Theme";
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -9,14 +13,22 @@ const client = new ApolloClient({
     uri: process.env.GRAPHQL_URL,
     fetch,
   }),
+  defaultOptions: {
+    watchQuery: {
+      pollInterval: parseInt(process.env.POLL_INTERVAL as string, 10),
+    },
+  },
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ApolloProvider client={client}>
-      <Component {...pageProps} />
-    </ApolloProvider>
+    <Theme>
+      {globalStyles}
+      <CacheProvider value={cache}>
+        <ApolloProvider client={client}>
+          <Component {...pageProps} />
+        </ApolloProvider>
+      </CacheProvider>
+    </Theme>
   );
 }
-
-export default MyApp;

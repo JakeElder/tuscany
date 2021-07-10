@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_meta_availability_selectors",
+  "info": {
+    "name": "Availability Selector",
+    "icon": "person-booth"
+  },
+  "options": {},
+  "attributes": {
+    "Rent": {
+      "type": "boolean"
+    },
+    "Purchase": {
+      "type": "boolean"
+    }
+  }
+}

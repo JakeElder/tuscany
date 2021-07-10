@@ -3,6 +3,148 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0-ic.11](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.10...v0.3.0-ic.11) (2020-09-04)
+
+**Note:** Version bump only for package workspace
+
+
+
+
+
+# [0.3.0-ic.10](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.9...v0.3.0-ic.10) (2020-09-04)
+
+
+### Bug Fixes
+
+* force redeploy ([b01730f](https://github.com/JakeElder/tuscany/commit/b01730fb7d5575381a53d1d98e440dc7cc7a60b6))
+
+
+### Features
+
+* add plot mapping in Google Maps ([13cc937](https://github.com/JakeElder/tuscany/commit/13cc937007f17d9d0fdd3b53362b9a95170cdc47))
+
+
+
+
+
+# [0.3.0-ic.9](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.8...v0.3.0-ic.9) (2020-09-02)
+
+
+### Bug Fixes
+
+* correct font link ([37b8d3a](https://github.com/JakeElder/tuscany/commit/37b8d3acfd8ae75dab4d234f90a6eadab23a2728))
+
+
+
+
+
+# [0.3.0-ic.8](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.7...v0.3.0-ic.8) (2020-09-02)
+
+
+### Bug Fixes
+
+* fix padding and missing web font ([c2fd3e0](https://github.com/JakeElder/tuscany/commit/c2fd3e0d27fc3234203bc5e3ec56a23a7590d5f9))
+* force build ([0df44c9](https://github.com/JakeElder/tuscany/commit/0df44c91410b960d298b2d2c363f4a2a58a33302))
+* force rebuild (front end env) ([6557b7d](https://github.com/JakeElder/tuscany/commit/6557b7d06505ce3536f6e0f5b5512090d3724677))
+
+
+
+
+
+# [0.3.0-ic.7](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.6...v0.3.0-ic.7) (2020-09-02)
+
+
+### Bug Fixes
+
+* fix mongoose package ([65867ec](https://github.com/JakeElder/tuscany/commit/65867ec0c92c070894fa71cfa1eda4905cce2488))
+* force rebuild ([bea7113](https://github.com/JakeElder/tuscany/commit/bea711307c144427d31241780a0bc5bce449d902))
+
+
+
+
+
+# [0.3.0-ic.6](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.5...v0.3.0-ic.6) (2020-09-02)
+
+
+### Bug Fixes
+
+* amend migrate script, remove redundant config ([86ef785](https://github.com/JakeElder/tuscany/commit/86ef7850d9e30b9e44fe13f5c8c72494d690752f))
+
+
+
+
+
+# [0.3.0-ic.5](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.4...v0.3.0-ic.5) (2020-09-02)
+
+
+### Features
+
+* add /land-for-sale route ([37a362d](https://github.com/JakeElder/tuscany/commit/37a362df38b3da8a2298057e607f82e00dac1e82))
+* add /land-for-sale/[plot].tsx ([0eb3f57](https://github.com/JakeElder/tuscany/commit/0eb3f575a0b29625066aff02842afe46cdada7be))
+* add /places-to-stay route ([d06f826](https://github.com/JakeElder/tuscany/commit/d06f8265f31317686824b98437be7c34688e4383))
+* update index page ([a1f2496](https://github.com/JakeElder/tuscany/commit/a1f24965d09712999dba5e69890b8f982884d69e))
+
+
+
+
+
+# [0.3.0-ic.4](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.3...v0.3.0-ic.4) (2020-09-02)
+
+
+### Features
+
+* add /places-to-stay/[property] route ([3cc068e](https://github.com/JakeElder/tuscany/commit/3cc068e69fd5a4518093836f868ae1582d41bdab))
+
+
+
+
+
+# [0.3.0-ic.3](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.2...v0.3.0-ic.3) (2020-09-01)
+
+
+### Bug Fixes
+
+* actually fix what I just tried to fix ([9564dfe](https://github.com/JakeElder/tuscany/commit/9564dfedb294ec0d5a0d93b26bda90fe38299715))
+
+
+
+
+
+# [0.3.0-ic.2](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.1...v0.3.0-ic.2) (2020-09-01)
+
+
+### Bug Fixes
+
+* fix styling and missing dep ([875d096](https://github.com/JakeElder/tuscany/commit/875d09638c6d8044dd4e5e683b2914243a431140))
+
+
+
+
+
+# [0.3.0-ic.1](https://github.com/JakeElder/tuscany/compare/v0.3.0-ic.0...v0.3.0-ic.1) (2020-09-01)
+
+
+### Features
+
+* add Google map ([3f1a842](https://github.com/JakeElder/tuscany/commit/3f1a84208f2b54c8d71b82f2436cfaace1c699a2))
+
+
+
+
+
+# [0.3.0-ic.0](https://github.com/JakeElder/tuscany/compare/v0.2.1...v0.3.0-ic.0) (2020-08-31)
+
+
+### Features
+
+* IndexPage in front end ([65282b6](https://github.com/JakeElder/tuscany/commit/65282b674d74eeadc096853dd0761423a24f470d))
+* rough v1 ([2204b75](https://github.com/JakeElder/tuscany/commit/2204b75a255e54e28ac8ee4f69d85ff6e0a7bd40))
+* **components:** add IndexPage ([c34ad6b](https://github.com/JakeElder/tuscany/commit/c34ad6b501f256bfbbc04638897f503d9e472aa5))
+
+
+
+
+
 ## [0.2.1](https://github.com/JakeElder/tuscany/compare/v0.2.0...v0.2.1) (2020-06-29)
 
 

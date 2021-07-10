@@ -1,10 +1,9 @@
-import { optional, object, string, array, StructType } from "superstruct";
+import { object, string, StructType } from "superstruct";
 
 const Struct = object({
   id: string(),
   name: string(),
-  color: string(),
-  places: optional(array(string())),
+  slug: string(),
 });
 
 export type Category = StructType<typeof Struct>;

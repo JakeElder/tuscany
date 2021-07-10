@@ -1,21 +1,24 @@
 import React from "react";
-import Header from "@mindfulstudio/tuscany-components/Header";
 import { useQuery, gql } from "@apollo/client";
 import { Category } from "@mindfulstudio/tuscany-types/Category";
+import LoadingPage from "../components/LoadingPage";
+import IndexPage from "../components/IndexPage";
 
 const CATEGORIES = gql`
   query CategoriesQuery {
     categories {
       id
       name
+      slug
     }
   }
 `;
 
 export default function Index() {
   const { loading, error, data } = useQuery(CATEGORIES);
+
   if (loading) {
-    return <p>loading...</p>;
+    return <LoadingPage />;
   }
 
   if (error) {
@@ -23,17 +26,5 @@ export default function Index() {
   }
 
   const { categories }: { categories: Category[] } = data;
-
-  return (
-    <div>
-      <Header>chiangdao.guide</Header>
-      <h2>Categories</h2>
-      <ul>
-        {categories.map((category) => {
-          return <li key={category.id}>{category.name}</li>;
-        })}
-      </ul>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-  );
+  return <IndexPage categories={categories} />;
 }
